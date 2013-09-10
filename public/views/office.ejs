@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="the doctor's office">
+    <meta name="author" content="kkho">
+    
+    <title><%= title %></title>
+
+    <!-- Bootstrap core CSS -->
+     <link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.css">
+     <link href="../bootstrap/jumbroton/jumbotron.css" rel="stylesheet">
+     <link href="../styles/sir.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><%=title %></a>
+
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" action="/logout" method="get">
+             <button type="submit" class="btn btn-warning">Logout</button>  
+          </form>
+          <form class="navbar-form navbar-right">
+             <button type="submit" class="btn btn-danger" onclick="del('<%= user %>')">Delete Account</button>  
+          </form>
+        </div>
+       
+	    </div>
+	</div>
+	<div class="hero-unit">
+			<form action="/office" method="post" accept-charset="utf-8">
+				<div id="chatarea" class="form-control">Welcome</div>
+				<hr>
+				<input type="text" class="form-control" id="entry" name="entry" placeholder="say something">
+				<span class="btn btn-info" onclick="sendMessage('<%= user %>')">Chat</span>
+        <h6><i>Doctor bot is still of version 1, it can only answer questions like 
+          WHAT IS YOUR NAME, HI, HOW ARE YOU, WHO ARE YOU, ARE YOU INTELLIGENT, ARE YOU REAL..have fun!</i></h6>
+			</form>
+		</div>	
+		<script src="../scripts/jquery-2.0.3.js"></script>
+		 <script type="text/javascript" src="../scripts/office.js"></script>	
+	</body>
+</html>

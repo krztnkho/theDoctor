@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="the doctor's office">
+    <meta name="author" content="kkho">
+    
+    <title><%= title %></title>
+
+    <!-- Bootstrap core CSS -->
+     <link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.css">
+     <link href="../bootstrap/jumbroton/jumbotron.css" rel="stylesheet">
+     <link href="../styles/login.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><%=title%></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" action="/office" method="post">
+            <div class="form-group">
+              <input type="text" placeholder="Username" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" name="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign up</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" align="center">    
+        <div  class="transbox">
+          <form class="form-signin" action="/" method="post" accept-charset="utf-8">
+              <h2 class="form-signin-heading">Please Log In</h2>
+              <input type="text" name="username" class="form-control" placeholder="username" autofocus>
+              <input type="password" name="password" class="form-control" placeholder="Password">
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Log-in</button>
+          </form>        
+        </div>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
